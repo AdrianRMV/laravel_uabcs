@@ -15,8 +15,29 @@
         @csrf
         <label for="">Nombre</label>
         <input type="text" name="name">
+
+        <br>
+        <br>
+
+        <label for="">Apellido</label>
+        <input type="text" name="lastname">
+
+        <br>
+        <br>
+
         <label for="">email</label>
         <input type="email" name="email">
+
+
+        <br>
+        <br>
+
+        <label for="">Contraseña</label>
+        <input type="text" name="password">
+
+        <br>
+        <br>
+
         <button type="submit">Enter</button>
     </form>
 
