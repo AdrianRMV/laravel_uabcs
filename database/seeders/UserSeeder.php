@@ -16,7 +16,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         $user = new User();
-        $user -> name = 'Adrian ';
+        $user -> name = 'Adrian';
+        $user -> lastname = 'Ramirez';
         $user -> email = 'adrian@gmail.com';
         $user -> password = 'lololol123';
 
@@ -25,6 +26,7 @@ class UserSeeder extends Seeder
 
         $user = new User();
         $user -> name = 'Lolazo';
+        $user -> lastname = 'Perez';
         $user -> email = 'lolazo@gmail.com';
         $user -> password = 'password';
 
