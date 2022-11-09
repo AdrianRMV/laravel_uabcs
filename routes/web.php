@@ -20,6 +20,15 @@ Route::get('/', function () {
 });
 
 
+Route::get('/home', function () {
+    return view('home');
+})-> name('home');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})-> name('login');
+
+
 Route::get('/users', [ UserController::class, 'index' ]);
 
 // Las rutas estaticas van sobre encima de las rutas dinamicas
