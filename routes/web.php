@@ -22,37 +22,21 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-})-> name('home');
+})->name('home');
 
 Route::get('/login', function () {
     return view('auth.login');
-})-> name('login');
+})->name('login');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/users', [ UserController::class, 'index' ]);
+    // Las rutas estaticas van sobre encima de las rutas dinamicas
+    Route::get('/users/create', [UserController::class, 'create']);
 
-// Las rutas estaticas van sobre encima de las rutas dinamicas
-Route::get('/users/create', [ UserController::class, 'create' ]);
+    Route::get('/users/{id}', [UserController::class, 'show']);
 
-Route::get('/users/{id}', [ UserController::class, 'show' ]);
+    Route::post('/users', [UserController::class, 'store']);
+});
 
-Route::post('/users', [ UserController::class, 'store' ]);
-
-
-
-Route::get('/clients', [ CLIENTEController::class, 'index' ]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::get('/clients', [CLIENTEController::class, 'index']);
