@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
+@section('contenido')
     <h1>Update view</h1>
     <form method="post" action="{{ url('/users') }}">
         @csrf
@@ -36,6 +28,4 @@
 
         <button type="submit">Enter</button>
     </form>
-</body>
-
-</html>
+@endsection

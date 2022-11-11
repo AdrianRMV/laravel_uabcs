@@ -28,15 +28,15 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                    @include('layouts.bread');
+                    @include('layouts.bread')
                     <!-- end page title -->
 
-                    @yield('contenido');
+                    @yield('contenido')
 
                 </div> <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-            @include('layouts.footer');
+            @include('layouts.footer')
         </div>
         <!-- end main content-->
 
